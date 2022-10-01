@@ -80,14 +80,6 @@
     <Compile Include="Enraged_MentalState\AdjustedCooldown_Patch.cs" />
     <Compile Include="Enraged_MentalState\MentalState_Enraged.cs" />
     <Compile Include="DeathActionWorker_MoodBoost.cs" />
-    <Compile Include="Facepaint\Building_FacepaintingTable.cs" />
-    <Compile Include="Facepaint\ColourPresetDef.cs" />
-    <Compile Include="Facepaint\Dialog_ChangeFacepaint.cs" />
-    <Compile Include="Facepaint\CompFacepaint.cs" />
-    <Compile Include="Facepaint\FacepaintDef.cs" />
-    <Compile Include="Facepaint\FacepaintExtension.cs" />
-    <Compile Include="Facepaint\HarmonyPatches_Facepaint.cs" />
-    <Compile Include="Facepaint\JobDriver_ChangeFacepaint.cs" />
     <Compile Include="Feast\InteractionWorker_DrunkChat.cs" />
     <Compile Include="Feast\InteractionWorker_VeryDrunkChat.cs" />
     <Compile Include="Feast\ThoughtWorker_TakingPartInFeast.cs" />
