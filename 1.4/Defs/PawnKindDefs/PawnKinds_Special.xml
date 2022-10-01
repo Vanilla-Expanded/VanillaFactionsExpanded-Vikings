@@ -6,7 +6,6 @@
         <label>slave</label>
         <race>Human</race>
         <combatPower>30</combatPower>
-        <baseRecruitDifficulty>0.30</baseRecruitDifficulty>
         <backstoryFiltersOverride>
             <li>
                 <categories>

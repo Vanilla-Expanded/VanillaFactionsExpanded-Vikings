@@ -384,7 +384,6 @@
     </PawnKindDef>
     <PawnKindDef ParentName="VFEV_NordsmenBase" Name="VFEV_NordsmeHousecarlBase" Abstract="True">
         <combatPower>230</combatPower>
-        <baseRecruitDifficulty>0.90</baseRecruitDifficulty>
         <minGenerationAge>30</minGenerationAge>
         <maxGenerationAge>70</maxGenerationAge>
         <itemQuality>Normal</itemQuality>
