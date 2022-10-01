@@ -66,7 +66,7 @@
     <Compile Include="Apiary\Placeworker_Apiary.cs" />
     <Compile Include="Apiary\WorkGiver_TakeHoneyOutOfApiary.cs" />
     <Compile Include="Apiary\WorkGiver_TendToApiary.cs" />
-    <Compile Include="BulletStun.cs" />
+    <Compile Include="Bullets\BulletStun.cs" />
     <Compile Include="Comp\CompLightningWhenHit.cs" />
     <Compile Include="Comp\CompPawnPsyWaver.cs" />
     <Compile Include="Comp\CompPawnTeleporter.cs" />
@@ -76,7 +76,7 @@
     <Compile Include="Comp\CompProperties_PawnTeleporter.cs" />
     <Compile Include="Comp\CompTargetable_AllPlantsOnTheMap.cs" />
     <Compile Include="Comp\CompTargetEffect_PlantGrower.cs" />
-    <Compile Include="CryptoBullet.cs" />
+    <Compile Include="Bullets\CryptoBullet.cs" />
     <Compile Include="Enraged_MentalState\AdjustedCooldown_Patch.cs" />
     <Compile Include="Enraged_MentalState\MentalState_Enraged.cs" />
     <Compile Include="DeathActionWorker_MoodBoost.cs" />
@@ -109,7 +109,7 @@
     <Compile Include="Settings\SettingsHelper.cs" />
     <Compile Include="Settings\VFEV_Settings.cs" />
     <Compile Include="Settings\VFEV_SettingsController.cs" />
-    <Compile Include="SitePartWorker_LegendaryGrave.cs" />
+    <Compile Include="MapGeneration\SitePartWorker_LegendaryGrave.cs" />
     <Compile Include="Verb_LightningStrike.cs" />
     <Compile Include="VFEV_MapComponentHelper.cs" />
     <Compile Include="MapGeneration\BeastHuntEvents\GenStep_Njorun.cs" />
