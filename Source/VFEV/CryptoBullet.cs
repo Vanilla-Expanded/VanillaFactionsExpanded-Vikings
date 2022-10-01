@@ -1,16 +1,11 @@
 ﻿using RimWorld;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Verse;
 
 namespace VFEV
 {
-    class CryptoBullet : Bullet
+    internal class CryptoBullet : Bullet
     {
-        protected override void Impact(Thing hitThing)
+        protected override void Impact(Thing hitThing, bool blockedByShield = false)
         {
             if (hitThing is Pawn hitPawn && hitPawn != null && hitPawn.RaceProps.FleshType == FleshTypeDefOf.Normal)
             {
@@ -28,7 +23,7 @@ namespace VFEV
         }
     }
 
-    class DamageWorker_CryptoCut : DamageWorker_Cut
+    internal class DamageWorker_CryptoCut : DamageWorker_Cut
     {
         public override DamageResult Apply(DamageInfo dinfo, Thing thing)
         {

@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using RimWorld;
-using UnityEngine;
-using UnityEngine.Assertions.Must;
 using Verse;
 using Verse.AI;
 using Verse.AI.Group;
@@ -161,7 +157,8 @@ namespace VFEV
             {
                 for (int j = 0; j < list.Count; j++)
                 {
-                    if (list[j].apparel.WornApparel.Any((Apparel ap) => ap is ShieldBelt))
+                    Pawn pawn = list[j];
+                    if (pawn.apparel != null && pawn.apparel.WornApparel.Any(ap => ap.def == ThingDefOf.Apparel_ShieldBelt))
                     {
                         LessonAutoActivator.TeachOpportunity(ConceptDefOf.ShieldBelts, OpportunityType.Critical);
                         break;

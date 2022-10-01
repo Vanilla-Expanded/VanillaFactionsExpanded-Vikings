@@ -1,16 +1,11 @@
 ﻿using RimWorld;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Verse;
 
 namespace VFEV
 {
-    class BulletStun : Bullet
+    internal class BulletStun : Bullet
     {
-        protected override void Impact(Thing hitThing)
+        protected override void Impact(Thing hitThing, bool blockedByShield = false)
         {
             if (Rand.RangeInclusive(0, 100) >= 50 && hitThing is Pawn pawn)
             {

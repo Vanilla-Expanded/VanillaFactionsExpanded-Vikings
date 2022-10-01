@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using RimWorld;
-using UnityEngine;
-using UnityEngine.Assertions.Must;
 using Verse;
 using Verse.AI;
 using Verse.AI.Group;
@@ -40,7 +36,7 @@ namespace VFEV
 
         private void GenerateAnimals(Faction faction, List<Pawn> pawns)
         {
-            int num = (int)((float)pawns.Count * 0.7f);
+            int num = (int)(pawns.Count * 0.7f);
             for (int i = 0; i < num; i++)
             {
                 Pawn pawn = PawnGenerator.GeneratePawn(new PawnGenerationRequest(PawnKindDef.Named("VFEV_Wolfhound"), faction));
@@ -56,8 +52,11 @@ namespace VFEV
                 List<Pawn> list = new List<Pawn>();
                 for (int i = 0; i < parms.pawnCount; i++)
                 {
-                    PawnGenerationRequest request = new PawnGenerationRequest(parms.pawnKind, parms.faction, PawnGenerationContext.NonPlayer, -1, forceGenerateNewPawn: false, newborn: false, allowDead: false, allowDowned: false, canGeneratePawnRelations: true, mustBeCapableOfViolence: true, 1f, forceAddFreeWarmLayerIfNeeded: false, allowGay: true, biocodeWeaponChance: parms.biocodeWeaponsChance, allowFood: true);
-                    request.BiocodeApparelChance = 1f;
+                    PawnGenerationRequest request = new PawnGenerationRequest(parms.pawnKind, parms.faction, PawnGenerationContext.NonPlayer, -1, false, false, false, true, true, 1f, false, true, biocodeWeaponChance: parms.biocodeWeaponsChance, allowFood: true)
+                    {
+                        BiocodeApparelChance = 1f
+                    };
+
                     Pawn pawn = PawnGenerator.GeneratePawn(request);
                     if (pawn != null)
                     {
@@ -150,7 +149,8 @@ namespace VFEV
             {
                 for (int j = 0; j < list.Count; j++)
                 {
-                    if (list[j].apparel.WornApparel.Any((Apparel ap) => ap is ShieldBelt))
+                    Pawn pawn = list[j];
+                    if (pawn.apparel != null && pawn.apparel.WornApparel.Any(ap => ap.def == ThingDefOf.Apparel_ShieldBelt))
                     {
                         LessonAutoActivator.TeachOpportunity(ConceptDefOf.ShieldBelts, OpportunityType.Critical);
                         break;
