@@ -4,8 +4,7 @@
     <xpath>/Defs/FactionDef[defName="VFEV_VikingsClan"]</xpath>
     <value>
       <modExtensions>
-        <li Class="KCSG.FactionSettlement">
-          <useStructureLayout>True</useStructureLayout>
+        <li Class="KCSG.CustomGenOption">
           <chooseFromlayouts>
             <li>VFEV_VikingVillage1</li>
             <li>VFEV_VikingVillage2</li>
@@ -23,8 +22,7 @@
     <xpath>/Defs/FactionDef[defName="VFEV_VikingsSlaver"]</xpath>
     <value>
       <modExtensions>
-        <li Class="KCSG.FactionSettlement">
-          <useStructureLayout>True</useStructureLayout>
+        <li Class="KCSG.CustomGenOption">
           <chooseFromlayouts>
             <li>VFEV_VikingVillage1</li>
             <li>VFEV_VikingVillage2</li>
