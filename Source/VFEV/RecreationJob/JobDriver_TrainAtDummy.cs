@@ -1,20 +1,33 @@
-﻿using System;
-using Verse;
+﻿using System.Collections.Generic;
 using RimWorld;
+using Verse;
 using Verse.AI;
-using System.Collections.Generic;
-using Verse.Sound;
 
 namespace VFEV
 {
     class JobDriver_TrainAtDummy : JobDriver
     {
+        public int initialXP = 0;
+
+        public override void ExposeData()
+        {
+            base.ExposeData();
+            Scribe_Values.Look(ref initialXP, "initialXP", 0);
+        }
+
+        public override object[] TaleParameters()
+        {
+            return new object[2]
+            {
+                pawn,
+                TargetA.Thing.def
+            };
+        }
+
         public override bool TryMakePreToilReservations(bool errorOnFailed)
         {
             return pawn.Reserve(job.targetA, job, 1, -1, null, errorOnFailed);
         }
-
-        public int initialXP = 0;
 
         protected override IEnumerable<Toil> MakeNewToils()
         {
@@ -28,42 +41,25 @@ namespace VFEV
             };
             toil.tickAction = delegate ()
             {
-                this.pawn.rotationTracker.FaceTarget(base.TargetA);
-                this.pawn.GainComfortFromCellIfPossible(false);
-                if (this.pawn.meleeVerbs.TryMeleeAttack(TargetA.Thing))
+                pawn.rotationTracker.FaceTarget(TargetA);
+                pawn.GainComfortFromCellIfPossible(false);
+                if (pawn.meleeVerbs.TryMeleeAttack(TargetA.Thing))
                 {
-                    //SoundInfo var = SoundInfo.InMap(new TargetInfo(this.TargetThingA));
-                    //var.volumeFactor = 0.25f;
-                    //SoundDef.Named("Pawn_Melee_Punch_HitBuilding_Quiet").PlayOneShot(var);
-                    this.pawn.skills.Learn(SkillDefOf.Melee, 30f, false);
+                    pawn.skills.Learn(SkillDefOf.Melee, 30f, false);
                     TargetThingA.HitPoints = initialXP;
                 }
-                Building joySource = (Building)base.TargetThingA;
-                JoyUtility.JoyTickCheckEnd(this.pawn, this.job.doUntilGatheringEnded ? JoyTickFullJoyAction.None : JoyTickFullJoyAction.EndJob, 1f, joySource);
+                Building joySource = (Building)TargetThingA;
+                JoyUtility.JoyTickCheckEnd(pawn, job.doUntilGatheringEnded ? JoyTickFullJoyAction.None : JoyTickFullJoyAction.EndJob, 1f, joySource);
             };
             toil.handlingFacing = true;
             toil.defaultCompleteMode = ToilCompleteMode.Delay;
-            toil.defaultDuration = (this.job.doUntilGatheringEnded ? this.job.expiryInterval : this.job.def.joyDuration);
+            toil.defaultDuration = job.doUntilGatheringEnded ? job.expiryInterval : job.def.joyDuration;
             toil.AddFinishAction(delegate
             {
-                JoyUtility.TryGainRecRoomThought(this.pawn);
+                JoyUtility.TryGainRecRoomThought(pawn);
             });
             yield return toil;
             yield break;
-        }
-
-        public override object[] TaleParameters()
-        {
-            return new object[2]
-            {
-                pawn,
-                base.TargetA.Thing.def
-            };
-        }
-        public override void ExposeData()
-        {
-            base.ExposeData();
-            Scribe_Values.Look(ref initialXP, "initialXP", 0);
         }
     }
 }

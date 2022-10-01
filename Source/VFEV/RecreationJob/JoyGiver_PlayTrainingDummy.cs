@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using RimWorld;
 using Verse;
 using Verse.AI;
@@ -10,7 +9,7 @@ namespace VFEV
     {
         public override Job TryGiveJob(Pawn pawn)
         {
-            return this.TryGiveJob(pawn, null, false);
+            return TryGiveJob(pawn, null, false);
         }
 
         public Job TryGiveJob(Pawn pawn, Thing targetThing, bool NoJoyCheck = false)
@@ -27,13 +26,13 @@ namespace VFEV
             }
             else
             {
-                List<Thing> list = pawn.Map.listerThings.ThingsOfDef(this.def.thingDefs[0]);
-                Predicate<Thing> predicate = delegate (Thing t)
+                List<Thing> list = pawn.Map.listerThings.ThingsOfDef(def.thingDefs[0]);
+                bool predicate(Thing t)
                 {
                     return !ForbidUtility.IsForbidden(t, pawn)
-                    && ReservationUtility.CanReserve(pawn, t, this.def.jobDef.joyMaxParticipants, -1, null, false)
-                    && SocialProperness.IsSociallyProper(t, pawn);
-                };
+                           && ReservationUtility.CanReserve(pawn, t, def.jobDef.joyMaxParticipants, -1, null, false)
+                           && SocialProperness.IsSociallyProper(t, pawn);
+                }
                 Thing thing = null;
                 if (targetThing != null && ReachabilityUtility.CanReach(pawn, targetThing.Position, PathEndMode.InteractionCell, Danger.Deadly) && predicate(targetThing))
                 {
@@ -45,7 +44,7 @@ namespace VFEV
                 }
                 if (thing != null)
                 {
-                    Job job = JobMaker.MakeJob(this.def.jobDef, thing);
+                    Job job = JobMaker.MakeJob(def.jobDef, thing);
                     return job;
                 }
                 result = null;

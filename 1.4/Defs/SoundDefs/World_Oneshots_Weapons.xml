@@ -140,8 +140,8 @@
     <subSounds>
       <li>
         <grains>
-          <li Class="AudioGrain_Clip">
-            <clipPath>Impact/PunchHitBuilding</clipPath>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Impact/PunchHitBuilding</clipFolderPath>
           </li>
         </grains>
         <volumeRange>
