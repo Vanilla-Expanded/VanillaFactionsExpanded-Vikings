@@ -18,7 +18,6 @@
         <playerInitialSettlementNameMaker>NamerSettlementViking</playerInitialSettlementNameMaker>
         <factionNameMaker>NamerFactionViking</factionNameMaker>
         <settlementNameMaker>NamerSettlementViking</settlementNameMaker>
-        <geneticVariance>1</geneticVariance>
         <allowedCultures><li>Vikings</li></allowedCultures>
         <startingResearchTags>
             <li>TribalStart</li>

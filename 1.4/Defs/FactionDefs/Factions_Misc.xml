@@ -11,7 +11,6 @@
     <canMakeRandomly>true</canMakeRandomly>
     <canStageAttacks>true</canStageAttacks>
     <factionIconPath>World/WorldObjects/Expanding/Village</factionIconPath>
-    <geneticVariance>0.1</geneticVariance>
     <factionNameMaker>NamerFactionViking</factionNameMaker>
     <settlementNameMaker>NamerSettlementViking</settlementNameMaker>
     <techLevel>Medieval</techLevel>
