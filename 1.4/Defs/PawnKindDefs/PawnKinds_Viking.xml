@@ -11,7 +11,7 @@
             <li>Neolithic</li>
             <li>Apparel_Viking</li>
         </apparelTags>
-        <modExtensions>
+        <!--<modExtensions>
             <li Class="VFEV.Facepaint.FacepaintExtension">
                 <tags>
                     <li>Tribal</li>
@@ -33,7 +33,7 @@
                     </options>
                 </color>
             </li>
-        </modExtensions>
+        </modExtensions>-->
         <initialWillRange>1~3</initialWillRange>
         <initialResistanceRange>12~20</initialResistanceRange>
     </PawnKindDef>
