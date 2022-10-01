@@ -10,7 +10,7 @@
         <subSounds>
             <li>
                 <grains>
-                    <li Class="AudioGrain_Folder">
+                    <li Class="AudioGrain_Clip">
                         <clipPath>Misc/Apiary/ambient_apiary_loop</clipPath>
                     </li>
                 </grains>

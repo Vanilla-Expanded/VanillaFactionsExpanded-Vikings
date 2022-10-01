@@ -10,8 +10,8 @@
     <subSounds>
       <li>
         <grains>
-          <li Class="AudioGrain_Folder">
-            <clipFolderPath>Weapon/CryptoRifleShot</clipFolderPath>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Weapon/CryptoRifleShot</clipPath>
           </li>
         </grains>
         <volumeRange>
@@ -32,8 +32,8 @@
     <subSounds>
       <li>
         <grains>
-          <li Class="AudioGrain_Folder">
-            <clipFolderPath>Weapon/CryptoPistolShot</clipFolderPath>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Weapon/CryptoPistolShot</clipPath>
           </li>
         </grains>
         <volumeRange>
@@ -54,8 +54,8 @@
     <subSounds>
       <li>
         <grains>
-          <li Class="AudioGrain_Folder">
-            <clipFolderPath>Weapon/CryptoLightCrossbowShot</clipFolderPath>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Weapon/CryptoLightCrossbowShot</clipPath>
           </li>
         </grains>
         <volumeRange>
@@ -75,8 +75,8 @@
     <subSounds>
       <li>
         <grains>
-          <li Class="AudioGrain_Folder">
-            <clipFolderPath>Weapon/HeavyCryptoGunPickup</clipFolderPath>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Weapon/HeavyCryptoGunPickup</clipPath>
           </li>
         </grains>
         <volumeRange>
@@ -97,8 +97,8 @@
     <subSounds>
       <li>
         <grains>
-          <li Class="AudioGrain_Folder">
-            <clipFolderPath>Weapon/CryptoGunPickup</clipFolderPath>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Weapon/CryptoGunPickup</clipPath>
           </li>
         </grains>
         <volumeRange>
@@ -119,8 +119,8 @@
     <subSounds>
       <li>
         <grains>
-          <li Class="AudioGrain_Folder">
-            <clipFolderPath>Weapon/CryptoHeavyCrossbowShot</clipFolderPath>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Weapon/CryptoHeavyCrossbowShot</clipPath>
           </li>
         </grains>
         <volumeRange>
@@ -140,8 +140,8 @@
     <subSounds>
       <li>
         <grains>
-          <li Class="AudioGrain_Folder">
-            <clipFolderPath>Impact/PunchHitBuilding</clipFolderPath>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Impact/PunchHitBuilding</clipPath>
           </li>
         </grains>
         <volumeRange>
