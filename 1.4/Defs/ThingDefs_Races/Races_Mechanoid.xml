@@ -290,6 +290,16 @@
           </shadowData>
         </bodyGraphicData>
       </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/Odin</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>3</drawSize>
+          <shadowData>
+            <volume>(0.6, 0.8, 0.6)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
     </lifeStages>
     <weaponMoney>9999~9999</weaponMoney>
     <weaponTags>
