@@ -60,7 +60,8 @@
       </li>
       
       <!-- Buildings -->
-      <li Class="StockGenerator_Art">
+      <li Class="StockGenerator_MarketValue">
+        <tradeTag>Art</tradeTag>
         <countRange>4~8</countRange>
       </li>
       
