@@ -1,6 +1,5 @@
-﻿using System;
+﻿using RimWorld;
 using Verse;
-using RimWorld;
 using Verse.AI;
 
 namespace VFEV
@@ -8,7 +7,7 @@ namespace VFEV
     [DefOf]
     class VFEV_DefOf
     {
-    #pragma warning disable 0649
+#pragma warning disable 0649
         // Beast hunt
         public static PawnKindDef VFEV_Fenrir;
         public static PawnKindDef VFEV_Lothurr;
@@ -30,8 +29,6 @@ namespace VFEV
         public static ThingDef VFEV_LightningStrike;
 
         public static JobDef VFEV_HypothermiaResponse;
-
-        public static JobDef VFEV_ChangeFacepaint;
 
         // raids
         public static ThingDef VFEV_Apparel_TorchBelt;
