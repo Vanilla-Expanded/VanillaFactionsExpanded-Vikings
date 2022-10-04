@@ -237,13 +237,6 @@
   </KCSG.SymbolDef>
 
   <KCSG.SymbolDef>
-    <defName>VFE_TableFacePaints_WoodLog_South</defName>
-    <thing>VFE_TableFacePaints</thing>
-    <stuff>WoodLog</stuff>
-    <rotation>South</rotation>
-  </KCSG.SymbolDef>
-
-  <KCSG.SymbolDef>
     <defName>VFEV_Apparel_LeatherHelmet</defName>
     <thing>VFEV_Apparel_LeatherHelmet</thing>
   </KCSG.SymbolDef>
@@ -269,9 +262,9 @@
     <defName>VFEV_WoolyCow</defName>
     <pawnKindDef>VFEV_WoolyCow</pawnKindDef>
   </KCSG.SymbolDef>
-  
+
   <KCSG.SymbolDef>
     <defName>VFEV_Honey</defName>
     <thing>VFEV_Honey</thing>
-  </KCSG.SymbolDef>  
+  </KCSG.SymbolDef>
 </Defs>
