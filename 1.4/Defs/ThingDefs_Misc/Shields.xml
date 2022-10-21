@@ -83,7 +83,6 @@
             <Mass>1.7</Mass>
         </statBases>
         <comps>
-            <li Class="CompOversizedWeapon.CompProperties_OversizedWeapon"/>
             <li Class="VFECore.CompProperties_Shield">
                 <shieldTags>
                     <li>VikingBasic</li>
@@ -205,7 +204,6 @@
 			</layers>
 		</apparel>
         <comps>
-            <li Class="CompOversizedWeapon.CompProperties_OversizedWeapon"/>
             <li Class="VFECore.CompProperties_Shield">
                 <shieldTags>
                     <li>Crypto</li>
