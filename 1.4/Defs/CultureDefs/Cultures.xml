@@ -13,7 +13,7 @@
     <allowedPlaceTags>
       <li>OriginTribal</li>
     </allowedPlaceTags>
-    <iconPath>World/WorldObjects/Expanding/Village</iconPath>
+    <iconPath>World/WorldObjects/Expanding/VikingsClan</iconPath>
     <iconColor>(0.8, 0.8, 0.8)</iconColor>
     <preferredWeaponClasses>
       <noble>Vikings</noble>
