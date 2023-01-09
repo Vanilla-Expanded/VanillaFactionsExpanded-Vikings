@@ -21,7 +21,7 @@ namespace VFEV
         [HarmonyPostfix]
         static void PostFix(Pawn actor)
         {
-            if (actor.CurrentBed() is Building_Bed bed && (bed.def.defName == "VFEV_FurBed" || bed.def.defName == "VFEV_DoubleFurBed"))
+            if (actor.CurrentBed() is Building_Bed bed && actor.needs?.mood?.thoughts?.memories != null && (bed.def.defName == "VFEV_FurBed" || bed.def.defName == "VFEV_DoubleFurBed"))
                 actor.needs.mood.thoughts.memories.RemoveMemoriesOfDef(ThoughtDefOf.SleptInCold);
         }
     }
