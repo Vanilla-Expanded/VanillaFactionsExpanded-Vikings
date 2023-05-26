@@ -218,7 +218,7 @@
                 <offHandGraphicData>
                     <texPath>Things/Item/Equipment/Shield/CryptoShield/CryptoShield</texPath>
                     <graphicClass>Graphic_Multi</graphicClass>
-					<shaderType>CutoutComplex</shaderType>
+				
                     <drawSize>1.8</drawSize>
                 </offHandGraphicData>
                 <offHandHoldOffset>
