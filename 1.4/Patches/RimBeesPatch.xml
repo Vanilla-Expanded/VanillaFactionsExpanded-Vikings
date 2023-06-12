@@ -2,7 +2,7 @@
 <Patch>
 	<Operation Class="PatchOperationFindMod">
 		<mods>
-			<li>RimBees</li>
+			<li>Alpha Bees</li>
 		</mods>
 		<match Class="PatchOperationSequence">
 			<operations>
