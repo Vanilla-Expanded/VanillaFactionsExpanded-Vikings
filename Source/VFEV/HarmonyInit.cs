@@ -31,7 +31,7 @@ namespace VFEV
     public class PatchIsMechanoid
     {
         [HarmonyPostfix]
-        static void PostFix(ref RaceProperties __instance, ref bool __result)
+        static void PostFix(RaceProperties __instance, ref bool __result)
         {
             if (__instance.body == VFEV_DefOf.VFEV_Odin)
                 __result = false;
