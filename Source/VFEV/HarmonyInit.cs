@@ -33,7 +33,7 @@ namespace VFEV
         [HarmonyPostfix]
         static void PostFix(ref RaceProperties __instance, ref bool __result)
         {
-            if (__instance.FleshType == FleshTypeDefOf.Mechanoid && __instance?.body.defName == "VFEV_Odin")
+            if (__instance?.body == VFEV_DefOf.VFEV_Odin)
                 __result = false;
         }
     }

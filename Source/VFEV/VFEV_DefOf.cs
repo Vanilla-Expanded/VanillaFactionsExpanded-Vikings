@@ -55,6 +55,7 @@ namespace VFEV
 
         public static QuestScriptDef VFEV_OpportunitySite_LegendaryGrave;
         public static QuestScriptDef VFEV_OpportunitySite_AncientRuin;
+        public static BodyDef VFEV_Odin;
 
     }
 }
